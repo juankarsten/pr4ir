@@ -22,7 +22,7 @@ if __name__ == '__main__':
             relevance[query]=[dok]
         else:
             relevance[query].append(dok)
-    print relevance[1]
+    #print relevance[1]
     
     # hasil[eksperimen][query][urutan]=(recall,precision)
     hasil_eksperimen={}
@@ -60,5 +60,5 @@ if __name__ == '__main__':
         # write eksperimen
         hasil_eksperimen[ii]=hasil
         
-    print hasil_eksperimen[1][1]
-    print hasil_eksperimen[2][1]
+    #print hasil_eksperimen[1][1]
+    #print hasil_eksperimen[2][1]
