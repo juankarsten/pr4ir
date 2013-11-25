@@ -8,6 +8,7 @@ import re
 import array
 
 if __name__ == '__main__':
+    all_relevan = 20.0
     
     #relevance[query]=[array dok]
     relevance={}
@@ -21,7 +22,7 @@ if __name__ == '__main__':
             relevance[query]=[dok]
         else:
             relevance[query].append(dok)
-    print relevance[5]
+    print relevance[1]
     
     # hasil[eksperimen][query][urutan]=(recall,precision)
     hasil_eksperimen={}
@@ -52,11 +53,12 @@ if __name__ == '__main__':
                 total_relevan[query]+=1
             
             # recall
-            recall = total_relevan[query]/20
+            recall = total_relevan[query]/all_relevan
             precision = total_relevan[query]/total_doc[query]
             hasil[query][rank]=(recall,precision)
         
         # write eksperimen
         hasil_eksperimen[ii]=hasil
         
-    print hasil_eksperimen[1][5]
+    print hasil_eksperimen[1][1]
+    print hasil_eksperimen[2][1]
